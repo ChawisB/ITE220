@@ -17,12 +17,15 @@ window.onload = function() {
             status.textContent = data.weather[0].main +" - " +data.weather[0].description;
             var temp = document.getElementById("temperature");
             temp.innerHTML = data.main.temp +"&degC";
+            var humid = data.main.humidity;
+            var ele3 = document.getElementById("humid");
+            ele3.textContent = humid;
           }
         });
       });
       var london = document.getElementById("london");
       london.addEventListener("click", function(){
-        //alert("bangkok is clicked");
+        //alert("london is clicked");
         $.ajax({
           type: "GET",
           url: "http://api.openweathermap.org/data/2.5/weather?q=london&units=metric&appid=40003c174995e082b6051b071d97ca8d",
@@ -36,12 +39,15 @@ window.onload = function() {
             status.textContent = data.weather[0].main +" - " +data.weather[0].description;
             var temp = document.getElementById("temperature");
             temp.innerHTML = data.main.temp +"&degC";
+            var humid = data.main.humidity;
+            var ele3 = document.getElementById("humid");
+            ele3.textContent = humid;
           }
         });
       });
       var seoul = document.getElementById("seoul");
       seoul.addEventListener("click", function(){
-        //alert("bangkok is clicked");
+        //alert("seoul is clicked");
         $.ajax({
           type: "GET",
           url: "http://api.openweathermap.org/data/2.5/weather?q=seoul&units=metric&appid=40003c174995e082b6051b071d97ca8d",
@@ -55,6 +61,9 @@ window.onload = function() {
             status.textContent = data.weather[0].main +" - " +data.weather[0].description;
             var temp = document.getElementById("temperature");
             temp.innerHTML = data.main.temp +"&degC";
+            var humid = data.main.humidity;
+            var ele3 = document.getElementById("humid");
+            ele3.textContent = humid;
           }
         });
       });
